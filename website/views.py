@@ -1,28 +1,28 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 views = Blueprint('views', __name__)
 
 # Home Page
 @views.route('/')
 def home():
-    return "<h1>Home</h1>"
+    return render_template("home.html")
 
 # About Us Page
 @views.route('/about-us')
 def about_us():
-    return "<h1>About Us</h1>"
+    return render_template("about_us.html")
 
 # Products Page
 @views.route('/products')
 def products():
-    return "<h1>Products</h1>"
+    return render_template("products.html")
 
 # Services Page
 @views.route('/services')
 def services():
-    return "<h1>Services</h1>"
+    return render_template("services.html")
 
 # Contact Us Page
 @views.route('/contact-us')
 def contact_us():
-    return "<h1>Contact Us</h1>"
+    return render_template("contact_us.html")

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {% if title %}
+            <title>{{ title }} - PT Jegati Gempita Trijaya</title>
+        {% else %}
+            <title>PT Jegati Gempita Trijaya</title>
+        {% endif %}
 
     <!-- Website meta data -->
     <meta name="author" content="PT. Jegati gempita Trijaya">
@@ -15,6 +20,35 @@
 
     </head>
     <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="navbar-toggler-icon ml-auto"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" id="home" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="aboutUs" href="/about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="products" href="/products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="services" href="/services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contactUs" href="/contact-us">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
