@@ -7,37 +7,101 @@
             <title>PT Jegati Gempita Trijaya</title>
         {% endif %}
 
-    <!-- Website meta data -->
-    <meta name="author" content="PT. Jegati gempita Trijaya">
-    <meta name="description" content="Consumer Goods">
+        <!-- Website meta data -->
+        <meta name="author" content="PT. Jegati gempita Trijaya">
+        <meta name="description" content="Consumer Goods">
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Link to style.css -->
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+
+        <style>
+            .nav-item a {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                color: white;
+            }
+
+            .nav-item a:hover {
+                background-color: #00043f;
+                color: white;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .nav-item a.active {
+                background-color: #00043f;
+                color: white;
+            }
+
+            .fa-location-arrow, .fa-phone, .fa-fax, .fa-envelope {
+                margin-right: 10px;
+            }
+
+            .fa-facebook, .fa-instagram, .fa-linkedin {
+                font-size: 20px;
+                color: black;
+                margin-right: 30px;
+            }
+
+            #footer {
+                color: white;
+            }
+        </style>
 
     </head>
     <body>
+        <!-- Header -->
+        <div class="header text-center pt-3">
+            <ul class="contacts">
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Phone: +6221 4612232</li></a>
+                <a href="#"><i class="fa fa-fax" aria-hidden="true"></i> Fax: +6221 46820775</a>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"> info@jegati.com</i></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </ul>
+        </div>
+
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between sticky-top py-4 pl-5">
+            <a class="navbar-brand" href="#">JGT</a>
+            <!-- Search Bar -->
+            <div>
+                <form class="form-inline justify-content-center" style="text-align: center;">
+                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search...">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </form>
+            </div>
+            <div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                     <span class="navbar-toggler-icon ml-auto"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
+                    <ul class="navbar-nav ml-auto px-4">
+                        <li class="nav-item pr-4">
                             <a class="nav-link" id="home" href="/">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item pr-4">
                             <a class="nav-link" id="aboutUs" href="/about-us">About Us</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item pr-4">
                             <a class="nav-link" id="products" href="/products">Products</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item pr-4">
                             <a class="nav-link" id="services" href="/services">Services</a>
                         </li>
                         <li class="nav-item">
@@ -48,6 +112,32 @@
             </div>
         </nav>
         {% block content %}{% endblock %}
+
+        <!-- Footer -->
+        <footer>
+            <div class="container-fluid bg-dark" id="footer">
+                <div class="row-10 py-5 pl-4">
+                    <p><b>CONTACT US</b></p>
+                    <br>
+                    <p><i class="fa fa-location-arrow" aria-hidden="true"></i>Ruko Taman Modern</p>
+                    <p>Blok R4 No. 6,</p>
+                    <p>Ujung Menteng - Cakung,</p>
+                    <p>East Jakarta 13960</p>
+                    <p>Indonesia</p>
+                    <br>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> Phone: +6221 4612232</p>
+                    <p><i class="fa fa-fax" aria-hidden="true"></i>Fax: +6221 46820775</p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"> info@jegati.com</i></p>
+                    <br>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+                <div class="row-2 py-2 pl-4 text-center">
+                    <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2021 PT Jegati Gempita Trijaya. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
