@@ -31,28 +31,23 @@
                 text-decoration: none;
                 color: white;
             }
-
             .nav-item a:hover {
                 background-color: #00043f;
                 color: white;
                 transition: all 0.2s ease-in-out;
             }
-
             .nav-item a.active {
                 background-color: #00043f;
                 color: white;
             }
-
-            .fa-location-arrow, .fa-phone, .fa-fax, .fa-envelope {
+            .fa-map-marker, .fa-phone, .fa-fax, .fa-envelope {
                 margin-right: 10px;
             }
-
             .fa-facebook, .fa-instagram, .fa-linkedin {
                 font-size: 20px;
                 color: black;
                 margin-right: 30px;
             }
-
             #footer {
                 color: white;
             }
@@ -63,8 +58,8 @@
         <!-- Header -->
         <div class="header text-center pt-3">
             <ul class="contacts">
-                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Phone: +6221 4612232</li></a>
-                <a href="#"><i class="fa fa-fax" aria-hidden="true"></i> Fax: +6221 46820775</a>
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> +6221 4612232</li></a>
+                <a href="#"><i class="fa fa-fax" aria-hidden="true"></i> +6221 46820775</a>
                 <a href="#"><i class="fa fa-envelope" aria-hidden="true"> info@jegati.com</i></a>
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-instagram"></a>
@@ -73,12 +68,14 @@
         </div>
 
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between sticky-top py-4 pl-5">
-            <a class="navbar-brand" href="#">JGT</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between sticky-top py-0 px-5">
+            <a class="navbar-brand py-0 my-0" href="/">
+                <img src="{{url_for('static', filename='logo.png')}}" alt="JGT" width="100" height="90">
+            </a>
             <!-- Search Bar -->
             <div>
                 <form class="form-inline justify-content-center" style="text-align: center;">
-                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search...">
+                    <input class="form-control border-right-0 border" type="search" placeholder="Search...">
                     <span class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit">
                             <i class="fa fa-search"></i>
@@ -114,12 +111,12 @@
         {% block content %}{% endblock %}
 
         <!-- Footer -->
-        <footer>
-            <div class="container-fluid bg-dark" id="footer">
-                <div class="row-10 py-5 pl-4">
+        <footer class="container-fluid bg-dark" id="footer">
+            <div class="row py-5 px-4">
+                <div class="col-6">
                     <p><b>CONTACT US</b></p>
                     <br>
-                    <p><i class="fa fa-location-arrow" aria-hidden="true"></i>Ruko Taman Modern</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>Ruko Taman Modern</p>
                     <p>Blok R4 No. 6,</p>
                     <p>Ujung Menteng - Cakung,</p>
                     <p>East Jakarta 13960</p>
@@ -128,14 +125,17 @@
                     <p><i class="fa fa-phone" aria-hidden="true"></i> Phone: +6221 4612232</p>
                     <p><i class="fa fa-fax" aria-hidden="true"></i>Fax: +6221 46820775</p>
                     <p><i class="fa fa-envelope" aria-hidden="true"> info@jegati.com</i></p>
+                </div>
+                <div class="col-6">
+                    <p><b>FOLLOW US</b></p>
                     <br>
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-linkedin"></a>
                 </div>
-                <div class="row-2 py-2 pl-4 text-center">
-                    <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2021 PT Jegati Gempita Trijaya. All Rights Reserved.</p>
-                </div>
+            </div>
+            <div class="row-2 text-center py-2 pl-4">
+                <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2021 PT Jegati Gempita Trijaya. All Rights Reserved.</p>
             </div>
         </footer>
 
