@@ -1,4 +1,65 @@
 {% extends "base.html" %}
 {% block content %}
 
+<style>
+    #tentang-kami {
+        background-color: #ededed;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: center;
+    }
+    #visi-title, #visi, #misi-title, #misi {
+        justify-content: center;
+    }
+</style>
+
+<div class="container-fluid">
+    <!-- Tentang Kami -->
+    <div class="row px-5 text-center" id="tentang-kami">
+        <h3>Tentang Kami</h3>
+        <br><br><br>
+        <p><strong>PT Jegati Gempita Trijaya merupakan perusahaan yang berdiri sejak 29 Agustus 2019, 
+            bergerak dibidang supplier bahan baku obat dan kosmetik</strong>
+            <br><br>
+            Kami telah memiliki izin dan sertifikasi yang diakui oleh BPOM dan Kementrian Kesehatan. 
+            Dengan izin PBBF dan sertifikasi CDOB, sarana dan prasarana serta pengawasan mutu produk 
+            yang didistribusikan terlah terjamin dan memenuhi standar yang ditetapkan oleh BPOM.
+            <br><br>
+            Dengan kerjasama yang kuat dengan supplier serta rutin mengikuti pameran CPhI di Asia, kami 
+            berkomitmen untuk menjadi supplier yang berkualitas.
+        </p>
+    </div>
+
+    <!-- Visi -->
+    <div class="row px-5 pt-5 pb-2" id="visi-title">
+        <h3>Visi</h3>
+    </div>
+    <div class="row px-5 pb-5" id="visi">
+        <p>"Menjadi pemasok bahan baku yang unggul dalam menyediakan produk yang bermutu dengan 
+            harga terbaik bagi pelanggan"</p>
+        <br>
+    </div>
+    <!-- Misi -->
+    <div class="row px-5 pb-2" id="misi-title">
+        <h3>Misi</h3>
+    </div>
+    <div class="row px-5 pb-5" id="misi">
+        <div class="col-4 no-gutters text-center">
+            <img src="../static/distribution.png" style="width: 70px;">
+            <br><br>
+            <p>Menjadi pemasok bahan baku industri dan kosmetik dengan segala legalitas dan kehalalannya.</p>
+        </div>
+        <div class="col-4 no-gutters text-center">
+            <img src="../static/handshake.png" style="width: 70px;">
+            <br><br>
+            <p>Berkomitmen dalam memberikan pelayanan terbaik dan mempertahankan kepercayaan pelanggan.</p>
+        </div>
+        <div class="col-4 no-gutters text-center">
+            <img src="../static/project-management.png" style="width: 70px;">
+            <br><br>
+            <p>Menjadi perusahaan yang inovatif dalam menanggapi setiap perubahan.</p>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
