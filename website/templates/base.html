@@ -80,25 +80,6 @@
                     font-size: 13px;
                 }
             }
-            @media (max-width: 650px) {
-                #header-info {
-                    font-size: 13px;
-                }
-            }
-            @media (max-width: 800px) {
-                .footer {
-                    font-size: 12px;
-                }
-            }
-            @media (max-width: 800px) {
-                .fa-facebook, .fa-instagram, .fa-linkedin {
-                    margin-right: 5px;
-                    margin-bottom: 8px;
-                }
-            }
-            #header-info {
-                margin-right: 15px;
-            }
             #copyright-info {
                 background-color: black;
             }
@@ -137,8 +118,20 @@
                         <li class="nav-item pr-4">
                             <a class="nav-link" id="aboutUs" href="/about-us">About Us</a>
                         </li>
-                        <li class="nav-item pr-4">
+                        <!-- <li class="nav-item pr-4">
                             <a class="nav-link" id="products" href="/products">Products</a>
+                        </li> -->
+                        <li class="nav-item dropdown pr-4">
+                            <a class="nav-link dropdown-toggle" href="/products" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Products
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Cosmetic</a>
+                                <a class="dropdown-item" href="#">Food</a>
+                                <a class="dropdown-item" href="#">Medical Devices</a>
+                                <!-- <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a> -->
+                            </div>
                         </li>
                         <li class="nav-item pr-4">
                             <a class="nav-link" id="services" href="/services">Services</a>
@@ -155,7 +148,7 @@
         <!-- Footer -->
         <div class="footer bg-dark" id="footer">
             <div class="row pt-5 pb-4 px-5">
-                <div class="col-4">
+                <div class="col-md-4">
                     <p><b>Contact Us</b></p>
                     <br>
                     <p><i class="fa fa-map-marker" aria-hidden="true"></i>Ruko Taman Modern</p>
@@ -164,19 +157,20 @@
                     <p>East Jakarta 13960</p>
                     <p>Indonesia</p>
                 </div>
-                <div class="col-4">
-                    <br><br><br>
-                    <p><i class="fa fa-phone" aria-hidden="true"> Phone: 
-                        <a href="tel:+62214612232" class="link">+6221 4612232</a>
+                <div class="col-md-4">
+                    <br><br>
+                    <p><i class="fa fa-phone" aria-hidden="true">
+                        <a href="tel:+62214612232" class="link"> Phone: +6221 4612232</a>
                     </i></p>
-                    <p><i class="fa fa-fax" aria-hidden="true"> Fax: 
-                        <a href="tel:+622146820775" class="link">+6221 46820775</a>
+                    <p><i class="fa fa-fax" aria-hidden="true">
+                        <a href="tel:+622146820775" class="link"> Fax: +6221 46820775</a>
                     </i></p>
                     <p><i class="fa fa-envelope" aria-hidden="true">
                         <a href="mailto:info@jegati.com" class="link"> info@jegati.com</a>
                     </i></p>
+                    <br><br>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <p><b>Follow Us</b></p>
                     <br>
                     <a href="https://web.facebook.com/jegati.gempitatrijaya" class="fa fa-facebook"></a>
