@@ -97,8 +97,8 @@
             </a>
             <!-- Search Bar -->
             <div>
-                <form class="form-inline justify-content-center" style="text-align: center;">
-                    <input class="form-control border-right-0 border" type="search" placeholder="Search...">
+                <form class="form-inline justify-content-center" style="text-align: center;" id="searchBar">
+                    <input class="form-control border-right-0 border" type="search" placeholder="Search..." id="textSearch">
                     <span class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit">
                             <i class="fa fa-search"></i>
@@ -106,6 +106,7 @@
                     </span>
                 </form>
             </div>
+
             <div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                     <span class="navbar-toggler-icon ml-auto"></span>
@@ -118,9 +119,6 @@
                         <li class="nav-item pr-4">
                             <a class="nav-link" id="aboutUs" href="/about-us">About Us</a>
                         </li>
-                        <!-- <li class="nav-item pr-4">
-                            <a class="nav-link" id="products" href="/products">Products</a>
-                        </li> -->
                         <li class="nav-item dropdown pr-4">
                             <a class="nav-link dropdown-toggle" href="/products" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Products
@@ -129,8 +127,6 @@
                                 <a class="dropdown-item" href="#">Cosmetic</a>
                                 <a class="dropdown-item" href="#">Food</a>
                                 <a class="dropdown-item" href="#">Medical Devices</a>
-                                <!-- <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a> -->
                             </div>
                         </li>
                         <li class="nav-item pr-4">
