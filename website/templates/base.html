@@ -35,8 +35,8 @@
                 font-family: Rubik;
             }
             .nav-item a:hover {
-                background-color: #e1b74d;
-                border-radius: 15px;
+                background-color: #ededed;
+                border-radius: 10px;
                 transition: all 0.2s ease-in-out;
                 opacity: 0.6;
             }
@@ -80,47 +80,53 @@
                     font-size: 13px;
                 }
             }
+            @media (max-width: 991px) {
+                .nav-link {
+                    font-size: 16px;
+                }
+            }
             #copyright-info {
                 background-color: black;
             }
             .link {
                 color: inherit;
             }
+            @media (max-width: 991px) {
+                .form-inline {
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            @media (min-width: 992px) {
+                .form-inline {
+                    width: 35%;
+                    justify-content: end;
+                }
+            }
         </style>
 
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between sticky-top py-3 px-5" id="nav">
-            <a class="navbar-brand py-0 my-0" href="/">
-                <img src="{{url_for('static', filename='logo.png')}}" alt="JGT" width="100" height="60">
-            </a>
-            <!-- Search Bar -->
-            <div>
-                <form class="form-inline justify-content-center" style="text-align: center;" id="searchBar">
-                    <input class="form-control border-right-0 border" type="search" placeholder="Search..." id="textSearch">
-                    <span class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="submit">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </form>
-            </div>
-
-            <div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top px-4">
+            <div class="container-fluid">
+                <a class="navbar-brand pr-5" href="/">
+                    <img src="{{url_for('static', filename='logo.png')}}" alt="JGT" width="100" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle">
                     <span class="navbar-toggler-icon ml-auto"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav ml-auto px-4">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                         <li class="nav-item pr-4">
-                            <a class="nav-link" id="home" href="/">Home</a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item pr-4">
-                            <a class="nav-link" id="aboutUs" href="/about-us">About Us</a>
+                            <a class="nav-link" href="/about-us">About Us</a>
                         </li>
                         <li class="nav-item dropdown pr-4">
-                            <a class="nav-link dropdown-toggle" href="/products" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="/products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Products
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -130,12 +136,20 @@
                             </div>
                         </li>
                         <li class="nav-item pr-4">
-                            <a class="nav-link" id="services" href="/services">Services</a>
+                            <a class="nav-link" href="/services">Services</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="contactUs" href="/contact-us">Contact Us</a>
+                        <li class="nav-item pr-4">
+                            <a class="nav-link" href="/contact-us">Contact Us</a>
                         </li>
                     </ul>
+
+                    <!-- Search Bar -->
+                    <form class="form-inline input-group">
+                        <input class="form-control" type="search" placeholder="Search..." id="textSearch" />
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>
