@@ -14,8 +14,17 @@ def about_us():
 
 # Products Page
 @views.route('/products')
+@views.route('/products/cosmetics')
+@views.route('/products/food')
+@views.route('/products/medical-devices')
 def products():
     return render_template("products.html", title="Products")
+def cosmetics():
+    return render_template("cosmetics.html", title="Cosmetics")
+def food():
+    return render_template("food.html", title="Food")
+def medical():
+    return render_template("medical.html", title="Medical Devices")
 
 # Services Page
 @views.route('/services')
