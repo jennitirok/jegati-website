@@ -114,6 +114,16 @@
                 background-color: #ededed;
                 color: #555;
             }
+            .btn {
+                background-color: #f6f6f6;
+                font-size: 24px;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                margin: auto;
+                display: block;
+                float: right;
+            }
         </style>
 
     </head>
@@ -127,6 +137,13 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle">
                     <span class="navbar-toggler-icon ml-auto"></span>
                 </button>
+                <!-- Search Bar -->
+                <form class="form-inline input-group">
+                    <!-- <input class="form-control" type="search" placeholder="Search..." id="textSearch" /> -->
+                    <button class="btn" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                         <li class="nav-item pr-4">
@@ -140,9 +157,9 @@
                               Products
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Cosmetic</a>
-                                <a class="dropdown-item" href="#">Food</a>
-                                <a class="dropdown-item" href="#">Medical Devices</a>
+                                <a class="dropdown-item" href="/products/cosmetics">Cosmetic</a>
+                                <a class="dropdown-item" href="/products/food">Food</a>
+                                <a class="dropdown-item" href="/products/medical-devices">Medical Devices</a>
                             </div>
                         </li>
                         <li class="nav-item pr-4">
@@ -153,14 +170,9 @@
                         </li>
                     </ul>
 
-                    <!-- Search Bar -->
-                    <form class="form-inline input-group">
-                        <input class="form-control" type="search" placeholder="Search..." id="textSearch" />
-                        <button class="btn btn-outline-secondary" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
+                    
                 </div>
+                
             </div>
         </nav>
         {% block content %}{% endblock %}
@@ -195,7 +207,7 @@
                     <br>
                     <a href="https://web.facebook.com/jegati.gempitatrijaya" class="fa fa-facebook"></a>
                     <a href="https://www.instagram.com/jegatigempitatrijaya/" class="fa fa-instagram"></a>
-                    <a href="https://www.linkedin.com/company/jegati-gempita-trijaya/" class="fa fa-linkedin"></a>
+                    <a href="https://www.linkedin.com/company/jegati-gempita-trijaya/" class="fa fa-linkedin mb-3"></a>
                 </div>
             </div>
             <div class="row-2 text-center pt-3 pb-1" id="copyright-info">
