@@ -1,18 +1,17 @@
 <?php
+    if($_POST["submit"]) {
+        $recipient="jennifer_tirok@yahoo.com";
+        $subject="Contact Form JGT Website Submitted";
+        $sender=$_POST["sender"];
+        $senderEmail=$_POST["senderEmail"];
+        $senderCompany=$_POST["senderCompany"];
+        $senderPhone=$_POST["senderPhone"];
+        $message=$_POST["message"];
 
-if($_POST["submit"]) {
-    $recipient="jennifer_tirok@yahoo.com";
-    $subject="Form JGT Website Submitted";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $senderCompany=$_POST["senderCompany"];
-    $senderPhone=$_POST["senderPhone"];
-    $message=$_POST["message"];
+        $mailBody="Name: $sender\nEmail: $senderEmail\nCompany: $senderCompany\Phone Number: $senderPhone\n\n$message";
 
-    $mailBody="Name: $sender\nEmail: $senderEmail\nCompany: $senderCompany\Phone Number: $senderPhone\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-}
+        mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+    }
 ?>
 
 {% extends "base.html" %}
@@ -93,7 +92,7 @@ if($_POST["submit"]) {
     </div>
 
     <!-- Form -->
-    <form class="form-horizontal px-5 pb-5" action="form.php" method="POST">
+    <form class="form-horizontal px-5 pb-5">
         <div class="form-group">
             <label>First Name</label>
             <input type="text" class="form-control" name="sender" required="true">
@@ -118,8 +117,8 @@ if($_POST["submit"]) {
             <label for="message">Your Message</label>
             <textarea class="form-control" name="message" rows="6" required="true"></textarea>
         </div>
-        <form action="#">
-            <input id="submit-button" type="submit" name="submit" value="Submit" />
+        <form action="form.php" method="POST">
+            <input id="submit" type="submit" name="submit" value="Submit" />
         </form>
     </form>
 </div>
