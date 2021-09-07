@@ -2,76 +2,19 @@
 {% block content %}
 
 <style>
-    .slideshow-container {
-        /* max-width: 1000px; */
+    .photo-container {
         position: relative;
         margin: auto;
-    }
-    /* .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: 0px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        transition: all 0.2s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    } */
-    .next{
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-    .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        -webkit-animation-fill-mode: forwards; 
-        animation-name: fade;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards; 
-    }
-    @-webkit-keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-    @media only screen and (max-width: 300px) {
-        .prev, .next {
-            font-size: 10px;
-        }
     }
     #description {
         background-color: #ededed;
     }
 </style>
 
-<!-- Slide Show -->
-<div class="slideshow-container">
-    <!-- <div class="main-building"> -->
-        <img src="../static/photos/front_desk.jpg" style="width: 100%">
-    <!-- </div> -->
-    <!-- <div class="homeSlides fade">
-        <img src="../static/photos/front_desk.jpg" style="width: 100%">
-    </div>
-    <div class="homeSlides fade">
-        <img src="../static/photos/all_staff.jpg" style="width: 100%;">
-    </div> -->
-    <!-- <div class="homeSlides fade">
-        <img src="../static/product.jpg" style="width: 100%">
-    </div> -->
+<!-- Main Photo -->
+<div class="photo-container">
+    <img src="../static/photos/front_desk.jpg" style="width: 100%">
 </div>
-
-<!-- <a class="prev" onclick="nextSlides(-1)">&#10094</a>
-<a class="next" onclick="nextSlides(1)">&#10095</a> -->
 
 <!-- Company Description -->
 <div class="container-fluid">
@@ -98,30 +41,5 @@
         </p>
     </div>
 </div>
-
-<!-- JavaScript for Slide Show -->
-<script>
-    var index = 1;
-    showSlides(index);
-    
-    function nextSlides(n) {
-        showSlides(index += n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("homeSlides");
-        if (n > slides.length) {
-            index = 1;
-        }
-        if (n < 1) {
-            index = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[index - 1].style.display = "block";
-    }
-</script>
 
 {% endblock %}

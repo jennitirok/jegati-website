@@ -10,6 +10,53 @@
         padding: 0 !important;
         margin: 0 !important;
     }
+    .homeSlides {
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: 0px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: all 0.2s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    .next{
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-fill-mode: forwards; 
+        animation-name: fade;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards; 
+    }
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    @media only screen and (max-width: 300px) {
+        .prev, .next {
+            font-size: 10px;
+        }
+    }
     #about-us {
         background-color: #fff;
         justify-content: center;
@@ -23,13 +70,28 @@
             margin-bottom: 20px;
         }
     }
+    #test {
+        background-color: black;
+    }
 </style>
 
 <div class="container-fluid">
     <div class="row no-gutters nopadding">
-        <div class="col-lg-5 no-gutters nopadding">
-            <img src="../static/photos/all_staff.jpg" id="staff">
+        <!-- Slide Show -->
+        <div class="col-lg-5 no-gutters nopadding" id="test">
+            <!-- <div class="slideshow-container"> -->
+                <div class="homeSlides fade py-0">
+                    <img src="../static/photos/all_staff.jpg" id="staff">
+                </div>
+                <div class="homeSlides fade py-0">
+                    <img src="../static/photos/gedung_depan.jpg" id="staff">
+                </div>
+            <!-- </div> -->
         </div>
+
+        <a class="prev" onclick="nextSlides(-1)">&#10094</a>
+        <a class="next" onclick="nextSlides(1)">&#10095</a>
+        
         <!-- About Us Description -->
         <div class="col-lg-7 px-5 mt-3 py-5 text-center" id="about-us">
             <!-- <div class="row px-5 py-5 text-center" id="about-us"> -->
@@ -94,5 +156,30 @@
         </div>
     </div>
 </div>
+
+<!-- JavaScript for Slide Show -->
+<script>
+    var index = 1;
+    showSlides(index);
+    
+    function nextSlides(n) {
+        showSlides(index += n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("homeSlides");
+        if (n > slides.length) {
+            index = 1;
+        }
+        if (n < 1) {
+            index = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[index - 1].style.display = "block";
+    }
+</script>
 
 {% endblock %}
