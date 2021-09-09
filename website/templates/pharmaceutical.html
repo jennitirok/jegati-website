@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid py-4">
+    <h3 style="text-align: center;">Pharmaceutical Product</h3>
+
+    <!-- Search Bar -->
+    <div class="search-bar p-3">
+        <form action="#">
+            <div class="input-group col-md-9 mx-md-auto py-3">
+                <input class="form-control py-2 border-right-0 border" name="search" value="" type="search" placeholder="Search Pharmaceutical Products..." id="search-products">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

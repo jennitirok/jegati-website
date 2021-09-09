@@ -13,18 +13,21 @@ def about_us():
     return render_template("about_us.html", title="About Us")
 
 # Products Page
-@views.route('/products')
-@views.route('/products/cosmetics')
-@views.route('/products/food')
-@views.route('/products/medical-devices')
-def products():
-    return render_template("products.html", title="Products")
+# @views.route('/products')
+# def products():
+#     return render_template("products.html", title="Products")
+@views.route('/products/cosmetic')
 def cosmetics():
-    return render_template("cosmetics.html", title="Cosmetics")
+    return render_template("cosmetic.html", title="Cosmetic Product")
+@views.route('/products/food-and-beverage')
 def food():
-    return render_template("food.html", title="Food")
+    return render_template("food_beverage.html", title="Food Product")
+@views.route('/products/pharmaceutical')
 def medical():
-    return render_template("medical.html", title="Medical Devices")
+    return render_template("pharmaceutical.html", title="Pharmaceutical Product")
+@views.route('/products/veterinary')
+def veterinary():
+    return render_template("veterinary.html", title="Veterinary Product")
 
 # Services Page
 @views.route('/services')
