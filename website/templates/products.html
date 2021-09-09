@@ -11,6 +11,7 @@
     }
 </style>
 
+ <!-- Products Navbar -->
 <div class="row no-gutters" id="product-bar">
     <div class="col-sm-4" id="bar">
         <a class="nav-link" href="/products/cosmetics">Cosmetics</a>
@@ -25,21 +26,23 @@
 
 <!-- Search Bar -->
 <div class="search-bar p-3">
-	<form action="#">
-		<div class="input-group col-md-9 mx-md-auto py-3">
+    <form action="#">
+        <div class="input-group col-md-9 mx-md-auto py-3">
             <input class="form-control py-2 border-right-0 border" name="search" value="" type="search" placeholder="Search Products..." id="search-products">
             <span class="input-group-append">
                 <button class="btn btn-outline-secondary" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
             </span>
-		</div>
-	</form>
+        </div>
+    </form>
 </div>
+
+<!-- Products Content -->
 
 <!-- Product Contents -->
 <!-- JavaScript for Checking Products URL -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function() {
       if (window.location.href.indexOf("cosmetics") > -1) {
         <div class="product-content">
@@ -47,7 +50,7 @@
         </div>
       }
     });
-  </script>
+  </script> -->
 
 <!-- {% if productLocation == "cosmetics" %}
     {% include 'cosmetics.html' %}
