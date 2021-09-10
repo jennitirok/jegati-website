@@ -1,11 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid py-4">
-    <h3 style="text-align: center;">Food & Beverage Product</h3>
+<style>
+    .product-heading {
+        width: 100%;
+        height: relative;
+        background-image: url('../static/photos/product-heading.jpg');
+        text-align: center;
+        color: white;
+        padding: 50px 50px;
+    }
+</style>
 
+<!-- Product Header -->
+<div class="product-heading">
+    <h3>Food & Beverage Product</h3>
+</div>
+
+<div class="container-fluid py-1">
     <!-- Search Bar -->
-    <div class="search-bar p-3">
+    <div class="search-bar">
         <form action="#">
             <div class="input-group col-md-9 mx-md-auto py-3">
                 <input class="form-control py-2 border-right-0 border" name="search" value="" type="search" placeholder="Search Food and Beverage Products..." id="search-products">
@@ -16,6 +30,114 @@
                 </span>
             </div>
         </form>
+    </div>
+
+    <!-- Product List -->
+    <div class="row px-4 py-4 ml-4">
+        <div class="col-md-4">
+            <h4><b>A</b></h4>
+            <p>Aloe Vera</p>
+            <p>Aspartame</p>
+            <br>
+
+            <h4><b>B</b></h4>
+            <p>Butylated Hydroxyanisole</p>
+            <p>Butylated Hydroxytoluene</p>
+            <br>
+
+            <h4><b>C</b></h4>
+            <p>Calcium Lactate</p>
+            <p>Carragenan</p>
+            <p>Castor Sugar</p>
+            <p>Cheese Powder</p>
+            <p>Citric Acid Mono (Anhy)</p>
+            <p>Coconut Cream Powder</p>
+            <p>Collagen</p>
+            <p>Corn Starch</p>
+            <br>
+
+            <h4><b>D</b></h4>
+            <p>Dextrose Anhydrous</p>
+            <p>Dextrose mono (Anhy)</p>
+            <p>Dextrose Monohydrous</p>
+            <br>
+
+            <h4><b>E</b></h4>
+            <p>EDTA 2 Na (4 Na)</p>
+            <p>Egg Powder</p>
+            <br>
+
+            <h4><b>F</b></h4>
+            <p>Fructose Crystal</p>
+        </div>
+        <div class="col-md-4">
+            <h4><b>G</b></h4>
+            <p>Garlic Powder</p>
+            <p>Gelatine</p>
+            <p>Ginger Powder</p>
+            <p>Ginseng Extract</p>
+            <p>Glucosamin</p>
+            <p>Glycerin USP Grade</p>
+            <p>Green Tea</p>
+            <br>
+
+            <h4><b>I</b></h4>
+            <p>Inositol</p>
+            <p>Instant Coffee</p>
+            <br>
+
+            <h4><b>L</b></h4>
+            <p>Lactose</p>
+            <p>Lactulose</p>
+            <br>
+
+            <h4><b>M</b></h4>
+            <p>Malt Extract (Powder, Liquid)</p>
+            <p>Maltodextrin DE 10-15 and 18-20</p>
+            <p>Menthol Crystal</p>
+            <br>
+
+            <h4><b>N</b></h4>
+            <p>NaCl (Salt)</p>
+            <p>Natamycin</p>
+            <p>Nisin</p>
+            <br>
+
+            <h4><b>O</b></h4>
+            <p>Olive Oil</p>
+        </div>
+        <div class="col-md-4">
+            <h4><b>P</b></h4>
+            <p>Peppermint Oil</p>
+            <p>Phosphate (TCP, DAP, etc)</p>
+            <p>Potassium Sorbate</p>
+            <p>Potassium Sorbate FCC IV</p>
+            <p>Propolis Extract</p>
+            <br>
+
+            <h4><b>S</b></h4>
+            <p>Sesame Oil</p>
+            <p>Sodium Benzoate</p>
+            <p>Sodium Benzoate BP 2000</p>
+            <p>Sorbic Acid</p>
+            <p>Spirulina</p>
+            <p>Sucralose</p>
+            <br>
+
+            <h4><b>V</b></h4>
+            <p>Vegetable Oil</p>
+            <p>Vitamin A</p>
+            <p>Vitamin A, D and E</p>
+            <p>Vitamin B3</p>
+            <p>Vitamin C</p>
+            <p>Vitamin C (Asorbic Acid)</p>
+            <p>Vitamin E-Oil</p>
+            <br>
+
+            <h4><b>X</b></h4>
+            <p>Xantham Gum</p>
+            <p>Xylitol</p>
+        </div>
     </div>
 </div>
 
