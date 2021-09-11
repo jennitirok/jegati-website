@@ -70,27 +70,24 @@
             margin-bottom: 20px;
         }
     }
-    #test {
-        background-color: black;
-    }
 </style>
 
-<div class="container-fluid">
+<div class="container-fluid px-0 mx-0">
     <div class="row no-gutters nopadding">
         <!-- Slide Show -->
-        <div class="col-lg-5 no-gutters nopadding" id="test">
+        <div class="col-lg-5 no-gutters nopadding">
             <!-- <div class="slideshow-container"> -->
-                <div class="homeSlides fade py-0">
+                <!-- <div class="homeSlides fade py-0"> -->
                     <img src="../static/photos/all_staff.jpg" id="staff">
-                </div>
-                <div class="homeSlides fade py-0">
+                <!-- </div> -->
+                <!-- <div class="homeSlides fade py-0">
                     <img src="../static/photos/gedung_depan.jpg" id="staff">
-                </div>
+                </div> -->
             <!-- </div> -->
         </div>
 
-        <a class="prev" onclick="nextSlides(-1)">&#10094</a>
-        <a class="next" onclick="nextSlides(1)">&#10095</a>
+        <!-- <a class="prev" onclick="nextSlides(-1)">&#10094</a>
+        <a class="next" onclick="nextSlides(1)">&#10095</a> -->
         
         <!-- About Us Description -->
         <div class="col-lg-7 px-5 mt-3 py-5 text-center" id="about-us">
@@ -155,10 +152,15 @@
             <p>Embrace innovation.</p>
         </div>
     </div>
+
+    <!-- Photo Collage -->
+    <div class="row">
+        <img src="../static/photos/collage.jpg" id="staff">
+    </div>
 </div>
 
 <!-- JavaScript for Slide Show -->
-<script>
+<!-- <script>
     var index = 1;
     showSlides(index);
     
@@ -180,6 +182,6 @@
         }
         slides[index - 1].style.display = "block";
     }
-</script>
+</script> -->
 
 {% endblock %}
