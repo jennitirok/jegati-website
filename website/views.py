@@ -34,6 +34,11 @@ def veterinary():
 def services():
     return render_template("services.html", title="Services")
 
+# Career Page
+@views.route('/career')
+def career():
+    return render_template("career.html", title="Career")
+
 # Contact Us Page
 @views.route('/contact-us')
 def contact_us():
