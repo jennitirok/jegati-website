@@ -9,6 +9,18 @@
     #description {
         background-color: #ededed;
     }
+    #product-section {
+        background-color: white;
+        text-align: center;
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+    }
+
+
 </style>
 
 <!-- Main Photo -->
@@ -16,8 +28,8 @@
     <img src="../static/photos/front_desk.jpg" style="width: 100%">
 </div>
 
-<!-- Company Description -->
 <div class="container-fluid">
+    <!-- Company Description -->
     <div class="row px-5 py-5 text-center" id="description">
         <!-- <p><strong>PT Jegati Gempita Trijaya merupakan perusahaan yang berdiri sejak 29 Agustus 2018, 
             bergerak dibidang supplier bahan baku obat dan kosmetik</strong>
@@ -39,6 +51,34 @@
             We are committed to maintain our best standard as a supplier through our strong cooperation with manufacturers
             from all around the world. 
         </p>
+    </div>
+
+    <!-- Product Links -->
+    <div class="row pt-4" id="product-section">
+        <div class="col-md-3">
+            <div class="card">
+                <a href="/products/cosmetic"><img src="../static/background/cosmetic_og.jpg" alt="Cosmetic" style="width: 100%"></a>
+            </div>
+            <p class="pt-3">Cosmetic Product</p>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <a href="/products/food-and-beverage"><img src="../static/background/food_og.jpg" alt="Food & Beverage" style="width: 100%"></a>
+            </div>
+            <p class="pt-3">Food & Beverage Product</p>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <a href="/products/pharmaceutical"><img src="../static/background/pharmaceutical_og.jpg" alt="Pharmaceutical" style="width: 100%"></a>
+            </div>
+            <p class="pt-3">Pharmaceutical Product</p>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <a href="/products/veterinary"><img src="../static/background/veterinary_og.jpg" alt="Veterinary" style="width: 100%"></a>
+            </div>
+            <p class="pt-3">Veterinary Product</p>
+        </div>
     </div>
 </div>
 
