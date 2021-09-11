@@ -1,11 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid py-4">
-    <h3 style="text-align: center;">Pharmaceutical Product</h3>
+<style>
+    .product-heading {
+        width: 100%;
+        height: relative;
+        background-image: url('../static/photos/product-heading.jpg');
+        text-align: center;
+        color: white;
+        padding: 50px 50px;
+    }
+</style>
 
+<!-- Product Header -->
+<div class="product-heading">
+    <h3>Pharmaceutical Product</h3>
+</div>
+
+<div class="container-fluid py-1">
     <!-- Search Bar -->
-    <div class="search-bar p-3">
+    <div class="search-bar">
         <form action="#">
             <div class="input-group col-md-9 mx-md-auto py-3">
                 <input class="form-control py-2 border-right-0 border" name="search" value="" type="search" placeholder="Search Pharmaceutical Products..." id="search-products">
@@ -16,6 +30,313 @@
                 </span>
             </div>
         </form>
+    </div>
+
+    <!-- Product List -->
+    <div class="row px-4 py-4 ml-4">
+        <div class="col-md-3">
+            <h4><b>Antibiotic</b></h4>
+            <br>
+            <p>Amoxcillin and Clavulanate Potassium</p>
+            <p>Amoxicillin Sodium and Clavulanate Potassium</p>
+            <p>Amoxicillin Trihydrate</p>
+            <p>Ampicillin Sodium and Sulbactam Sodium</p>
+            <p>Ampicillin Trihydrate</p>
+            <p>Azithromycin</p>
+            <p>Aztreonam (sterile)</p>
+            <p>Benzethonium Chloride</p>
+            <p>Benzathine Benzylpenicillin</p>
+            <p>Capreomycin Sulfate (sterile)</p>
+            <p>Cefadroxil</p>
+            <p>Cefalexin</p>
+            <p>Cefamandole Nafate (sterile)</p>
+            <p>Cefazolin Sodium (sterile)</p>
+            <p>Cefodizine Sodium (sterile)</p>
+            <p>Cefdinir</p>
+            <p>Cefepime Hydrochloride (sterile)</p>
+            <p>Cefepime Hydrochloride with L-Arginine (sterile)</p>
+            <p>Cefminox Sodium (sterile)</p>
+            <p>Cefoperazone Sodium (sterile)</p>
+            <p>Cefoprazone Sodium and Sulbactam Sodium 1:1, 2:1 (sterile)</p>
+            <p>Cefotaxime Sodium (sterile)</p>
+            <p>Cefoxitin Sodium (sterile)</p>
+            <p>Cefpirome Sulfate (sterile)</p>
+            <p>Cefprozil</p>
+            <p>Ceftazidime</p>
+            <p>Ceftazidime (sterile)</p>
+            <p>Ceftazidine with Sodium Carbonate (sterile)</p>
+            <p>Ceftezole Sodium (sterile)</p>
+            <p>Ceftizoxime Sodium (sterile)</p>
+            <p>Ceftriaxone Sodium (sterile)</p>
+            <p>Cefuroxime Axetil</p>
+            <p>Cefuroxime Sodium (sterile)</p>
+            <p>Cephradine</p>
+            <p>Cepharadine with L-Arginine (sterile)</p>
+            <p>Chindamycin Phosphate</p>
+            <p>Cilastatin</p>
+            <p>Ciprofloxacin Base</p>
+            <p>Ciprofloxacin Hydrocloride</p>
+            <p>Ciprofloxacin Lactate</p>
+            <p>Clarithromycin</p>
+            <p>Clindamycin Hydrochloride</p>
+            <p>Clindamycin Palmitate Hydrochloride</p>
+            <p>Cloramphenicol</p>
+            <p>Clortetracyline Hydrochloride</p>
+            <p>Doripenem (sterile)</p>
+            <p>Doxycycline Hydrochloride</p>
+            <p>Ertapenem (sterile)</p>
+            <p>Erythromycin</p>
+            <p>Erythromycin Ethylsuccinate</p>
+            <p>Flomoxef Sodium</p>
+            <p>Fosfomycin Calcium/Sodium</p>
+            <p>Imipenem (sterile)</p>
+            <p>Latamoxef Sodium (sterile)</p>
+            <p>Levofloxacin Hemihydrate</p>
+            <p>Levofloxacin Hydrochloride</p>
+            <p>Meropenem (sterile)</p>
+            <p>Methenamin</p>
+            <p>Metronidazole</p>
+            <p>Metronidazole Benzoate</p>
+            <p>Mezlocillin Sodium</p>
+            <p>Minocycline Hyrochloride</p>
+            <p>Moxifloxacin</p>
+            <p>Ofloxacin</p>
+            <p>PCMX or Chloroxylenol</p>
+            <p>Penicillin V Potassium</p>
+            <p>Piperacillin Sodium (sterile)</p>
+            <p>Piperacillin Sodium and Sulbactam Sodium 8:1 (sterile)</p>
+            <p>Procaine Benzylpenicillin (sterile)</p>
+            <p>Rifampin</p>
+            <p>Roxithromycin</p>
+            <p>Spectinomycin Hydrochloride/Sulfate (oral/sterile)</p>
+            <p>Side Chain for Biapenem</p>
+            <p>Triclosan</p>
+            <p>Thiamphenicol</p>
+            <p>Thiamphenicol Glycinate Hydrochloride</p>
+            <p>Thiamphenicol Palmitate</p>
+            <p>Tobramycin</p>
+            <p>Vaconomycin Hydrocloride</p>
+            <p>Zinc Lactate Dihydrate</p>
+        </div>
+        <div class="col-md-3">
+            <h4><b>Antifungi</b></h4>
+            <br>
+            <p>Dienogest</p>
+            <p>Clotrimazole</p>
+            <p>Fluconazole</p>
+            <p>Itraconazole</p>
+            <p>Ketokonazole</p>
+            <p>Miconazole</p>
+            <p>Nystatin</p>
+            <p>Tioconazole</p>
+            <p>Voriconazole</p>
+            <br>
+
+            <h4><b>Antimalaria</b></h4>
+            <br>
+            <p>Atovaquone</p>
+            <p>Doksisiklin</p>
+            <p>Klorokuin</p>
+            <p>Meflokuin</p>
+            <p>Primakuin</p>
+            <br>
+
+            <h4><b>Antivirus</b></h4>
+            <br>
+            <p>Acyclovir</p>
+            <p>Ganciclovir</p>
+            <p>Nevirapine</p>
+            <p>Oseltamivir</p>
+            <p>Ribavirin</p>
+            <p>Zanamivir</p>
+            <br>
+
+            <h4><b>Corticosteroide</b></h4>
+            <br>
+            <p>Beclomethasone Dipropionate</p>
+            <p>Betamethasone</p>
+            <p>Betamethasone Dipropionate</p>
+            <p>Betamethasone Sodium Phospate</p>
+            <p>Betamethasone Valerate</p>
+            <p>Budesonide</p>
+            <p>Buserellin Acetate</p>
+            <p>Clobetasol Propionate</p>
+            <p>Cortisone</p>
+            <p>Cortisone Acetate</p>
+            <p>Deflazacort</p>
+            <p>Desonide</p>
+            <p>Desoximetasone</p>
+            <p>Dexamethasone Base</p>
+            <p>Dexamethasone Sodium Phosphate</p>
+            <p>Dexamethasone-17-acetate</p>
+            <p>Diflorasone</p>
+            <p>Flumethasone</p>
+            <p>Flumethasone Acid</p>
+            <p>Fluorometholone</p>
+            <p>Fluticasone Propionate</p>
+            <p>Hydrocortisone</p>
+            <p>Hydrocortisone Acetate</p>
+            <p>Meprednisone</p>
+            <p>Meprednisone Hemisuccinate</p>
+            <p>Methylprednisolone</p>
+            <p>Methylprednisolone Acetate</p>
+            <p>Mometasone Furoate</p>
+            <p>Prednisolone</p>
+            <p>Prednisone</p>
+            <p>Triamcinolone</p>
+            <p>Triamcinolone Acetonide</p>
+            <p>Triamcinolone Acetonide Acetate</p>
+        </div>
+        <div class="col-md-3">
+            <h4><b>Excipient</b></h4>
+            <br>
+            <p>2-Pyrrodinone</p>
+            <p>Alcohol</p>
+            <p>Aspartame</p>
+            <p>Benzyl Alcohol</p>
+            <p>Benzyl Benzoate</p>
+            <p>CMC (any visconity)</p>
+            <p>Corn Starch</p>
+            <p>Dextrose Anhydrous/Monohydrate</p>
+            <p>Glycerine</p>
+            <p>Gummi Arabic</p>
+            <p>HP55</p>
+            <p>HPMC (5cps/15cps/50cps)</p>
+            <p>Inositol</p>
+            <p>Isopropyl Alcohol</p>
+            <p>Lanolin Anhydrous</p>
+            <p>L-HPC</p>
+            <p>Linolin Oil</p>
+            <p>Magnesium Stearate</p>
+            <p>Mannitol</p>
+            <p>MCC (PH101/PH102/PH200)</p>
+            <p>N-Methyl-2-Pyrrolidone</p>
+            <p>Pregelatinized Starch</p>
+            <p>Propylene Glycol</p>
+            <p>PVP K17/K25/K30/K90</p>
+            <p>PVP Lodine</p>
+            <p>PVP VA64</p>
+            <p>PVP XL/CL/Cross</p>
+            <p>Silicon Dioxide/Aerosil</p>
+            <p>Sodium Lauryl Suphate</p>
+            <p>Sodium Starch Glycolate</p>
+            <p>Sorbitol</p>
+            <p>Stearic Acid</p>
+            <p>Talcum</p>
+            <p>Tween 20/60/80</p>
+            <p>Vaselin Alba</p>
+            <p>Xanthan Gum</p>
+            <p>β-Cylodextrin</p>
+            <br>
+
+            <h4><b>Gastro</b></h4>
+            <br>
+            <p>Hyoscine-N-Butylbromide</p>
+            <p>Lansoprazole</p>
+            <p>Metoclopramide HCl</p>
+            <p>Metoclopramide Hydrocloride</p>
+            <p>Omeprazole</p>
+            <p>Ondansetron Hydrochloride</p>
+            <p>Pantoprazole Sodium</p>
+            <p>Ranitidine HCl</p>
+            <br>
+
+            <h4><b>Hormon</b></h4>
+            <br>
+            <p>Conjugated Estrogens</p>
+            <p>Cyproterone Acetate</p>
+            <p>Estradiol</p>
+            <p>Estriol</p>
+            <p>Estrone</p>
+            <p>Ethinylestradiol</p>
+            <p>Flurogestone Acetae</p>
+            <p>Progesterone</p>
+            <p>Testosterone</p>
+        </div>
+        <div class="col-md-3">
+            <h4><b>NSAIDs</b></h4>
+            <br>
+            <p>Aspirin</p>
+            <p>Celecoxib</p>
+            <p>Etodolac</p>
+            <p>Flurbiprofen</p>
+            <p>Ibuprofen</p>
+            <p>Indomethacin</p>
+            <p>Ketoprofen</p>
+            <p>Ketorolac</p>
+            <p>Mefenamic Acid</p>
+            <p>Meloxicam</p>
+            <p>Naproxen</p>
+            <p>Natrium Diklofenak</p>
+            <p>Piroxicam</p>
+            <p>Sulindac</p>
+            <p>Tolmetin</p>
+            <br>
+
+            <h4><b>Preservative</b></h4>
+            <br>
+            <p>Benzalkonium Chloride</p>
+            <p>Buthyl Paraben</p>
+            <p>Chlorphenesin</p>
+            <p>Ethyl Paraben</p>
+            <p>Methyl Paraben</p>
+            <p>Potassium Sorbate</p>
+            <p>Propyl Paraben</p>
+            <p>Sodium Benzoate</p>
+            <br>
+
+            <h4><b>Sedativ</b></h4>
+            <br>
+            <p>Lidocaine</p>
+            <br>
+            
+            <h4><b>Supplement & Multivitamins</b></h4>
+            <br>
+            <p>Astaxanthin</p>
+            <p>Axerophtholum (Vitamin A) </p>
+            <p>Calcium D-Pantothenate</p>
+            <p>Cobamamide</p>
+            <p>Collagen</p>
+            <p>Cytidine</p>
+            <p>Folic Acid</p>
+            <p>Glucosamine</p>
+            <p>L-Carnitine Fumarate</p>
+            <p>Mecobalamin</p>
+            <p>Nicotinamide</p>
+            <p>VA Acetate/Palmitate, Powder/Oil</p>
+            <p>VB1 HCl/Mono</p>
+            <p>VB2</p>
+            <p>VB6 HCL</p>
+            <p>VD3 Powder/Oil</p>
+            <p>Vitamin B12</p>
+            <p>Vitamin C Powder/Coated/Sodium</p>
+            <p>VK1 - 4</p>
+            <br>
+
+            <h4><b>Others</b></h4>
+            <br>
+            <p>Actarit</p>
+            <p>Bicalutamide</p>
+            <p>Chlorpheniramine Maleate</p>
+            <p>Dorzolamide</p>
+            <p>Dutasteride</p>
+            <p>Finasteride</p>
+            <p>Gabapentin</p>
+            <p>Ginseng Extract</p>
+            <p>Heparin Sodium</p>
+            <p>Ketotifen Fumarate</p>
+            <p>Levetiracetam</p>
+            <p>Levodopa</p>
+            <p>Loratadine</p>
+            <p>Mebhydrolin Napadisylate</p>
+            <p>Metamizole Sodium (Analgin)</p>
+            <p>Montelukast Sodium</p>
+            <p>Nateglinide</p>
+            <p>Paracetamol</p>
+            <p>Repaglinide</p>
+            <p>Tranexamic Acid</p>
+            <p>Voglibose</p>
+        </div>
     </div>
 </div>
 
