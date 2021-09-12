@@ -5,10 +5,18 @@
     #staff {
         width: 100%;
         height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
-    .nopadding {
-        padding: 0 !important;
-        margin: 0 !important;
+    #image-container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+    }
+    @media (max-width: 992px) {
+        #image-container, #staff {
+            padding: 0 !important;
+            box-shadow: none;
+        }
     }
     .homeSlides {
         width: 100%;
@@ -57,6 +65,13 @@
             font-size: 10px;
         }
     }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 10px 5px;
+        width: 95%;
+        margin: auto;
+        text-align: center;
+    }
     #about-us {
         background-color: #fff;
         justify-content: center;
@@ -73,9 +88,9 @@
 </style>
 
 <div class="container-fluid px-0 mx-0">
-    <div class="row no-gutters nopadding">
+    <div class="row no-gutters">
         <!-- Slide Show -->
-        <div class="col-lg-5 no-gutters nopadding">
+        <div class="col-lg-4 no-gutters" id="image-container">
             <!-- <div class="slideshow-container"> -->
                 <!-- <div class="homeSlides fade py-0"> -->
                     <img src="../static/photos/all_staff.jpg" id="staff">
@@ -90,10 +105,13 @@
         <a class="next" onclick="nextSlides(1)">&#10095</a> -->
         
         <!-- About Us Description -->
-        <div class="col-lg-7 px-5 mt-3 py-5 text-center" id="about-us">
+        <div class="col-lg-8 px-5 py-5 text-center" id="about-us">
             <!-- <div class="row px-5 py-5 text-center" id="about-us"> -->
-            <h3>About Us</h3>
-            <br><br><br>
+            <div class="card pt-3">
+                <h3>About Us</h3>
+            </div>
+            <br>
+            <!-- <br><br><br> -->
             <!-- <p><strong>PT Jegati Gempita Trijaya merupakan perusahaan yang berdiri sejak 29 Agustus 2019, 
                 bergerak dibidang supplier bahan baku obat dan kosmetik</strong>
                 <br><br>
@@ -104,16 +122,18 @@
                 Dengan kerjasama yang kuat dengan supplier serta rutin mengikuti pameran CPhI di Asia, kami 
                 berkomitmen untuk menjadi supplier yang berkualitas.
             </p> -->
-            <p><strong>PT Jegati Gempita Trijaya was established on August, 2019, specialized in supplying
-                Pharmaceutical and Cosmetic raw materials certified by BPOM (National Agency of Drug and Food Control) 
-                and Ministry of Health Indonesia</strong>
-                <br><br>
-                Approved by PBF (Pedagang Besar Farmasi) and CDOB (Cara Distribusi Obat yang Baik), we have ensured 
-                that our facilities, infrastructure and quality of products have qualified the highest standard. 
-                <br><br>
-                We are committed to maintain our best standard as a supplier through our strong cooperation with manufacturers
-                from all around the world. 
-            </p>
+            <div class="card">
+                <p style="padding: 15px 15px 0px 15px"><strong>PT Jegati Gempita Trijaya was established on August, 2019, specialized in supplying
+                    Pharmaceutical and Cosmetic raw materials certified by BPOM (National Agency of Drug and Food Control) 
+                    and Ministry of Health Indonesia</strong>
+                    <br><br>
+                    Approved by PBF (Pedagang Besar Farmasi) and CDOB (Cara Distribusi Obat yang Baik), we have ensured 
+                    that our facilities, infrastructure and quality of products have qualified the highest standard. 
+                    <br><br>
+                    We are committed to maintain our best standard as a supplier through our strong cooperation with manufacturers
+                    from all around the world. 
+                </p>
+            </div>
             <!-- </div> -->
         </div>
     </div>
