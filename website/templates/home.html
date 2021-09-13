@@ -23,6 +23,14 @@
     .card:hover {
         opacity: 0.7;
     }
+    #list {
+        text-align: center;
+    }
+    @media (max-width: 768px) {
+        #customer-list {
+            padding-bottom: 40px;
+        }
+    }
 </style>
 
 <!-- Main Photo -->
@@ -80,6 +88,20 @@
                 <a href="/products/veterinary"><img src="../static/background/veterinary_og.jpg" alt="Veterinary" style="width: 100%; border-radius: 25px;"></a>
             </div>
             <p class="pt-3">Veterinary Product</p>
+        </div>
+    </div>
+
+    <hr style="width: 80%">
+
+    <!-- Our Customers and Suppliers -->
+    <div class="row pt-4 pb-3" id="list">
+        <div class="col-md-6" id="customer-list">
+            <h4>Our Customers</h4>
+            <img src="../static/photos/customer-list.jpg" style="width: 100%">
+        </div>
+        <div class="col-md-6" id="supplier-list">
+            <h4>Our Suppliers</h4>
+            <img src="../static/photos/supplier-list.jpg" style="width: 100%">
         </div>
     </div>
 </div>
