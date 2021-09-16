@@ -114,11 +114,15 @@
             nav ul li a,
             nav ul li a:after,
             nav ul li a:before {
-                transition: all .5s;
+                transition: all .25s;
             }
-            nav ul li a:hover {
-                background-color: #ededed;
-                color: #555;
+            .nav-link:visited,
+            .nav-link:link {
+                border-bottom: 2px solid transparent;
+            }
+            .nav-link:hover,
+            .nav-link.active {
+                border-bottom: 2px solid #DEAE36;
             }
             @media (max-width: 992px) {
                 .navbar-toggler {
@@ -139,49 +143,51 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top px-4">
-            <div class="container-fluid">
-                <a class="navbar-brand pr-5" href="/">
-                    <img src="{{url_for('static', filename='logo.png')}}" alt="JGT" width="100" height="60">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle">
-                    <span class="navbar-toggler-icon ml-auto"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item pr-4">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item pr-4">
-                            <a class="nav-link" href="/about-us">About Us</a>
-                        </li>
-                        <li class="nav-item dropdown pr-4">
-                            <a class="nav-link dropdown-toggle" href="/products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Products
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/products/cosmetic">Cosmetic</a>
-                                <a class="dropdown-item" href="/products/food-and-beverage">Food and Beverage</a>
-                                <a class="dropdown-item" href="/products/pharmaceutical">Pharmaceutical</a>
-                                <a class="dropdown-item" href="/products/veterinary">Veterinary</a>
-                            </div>
-                        </li>
-                        <!-- <li class="nav-item pr-4">
-                            <a class="nav-link" href="/products">Products</a>
-                        </li> -->
-                        <li class="nav-item pr-4">
-                            <a class="nav-link" href="/services">Services</a>
-                        </li>
-                        <li class="nav-item pr-4">
-                            <a class="nav-link" href="/career">Career</a>
-                        </li>
-                        <li class="nav-item pr-4">
-                            <a class="nav-link" href="/contact-us">Contact Us</a>
-                        </li>
-                    </ul>  
-                </div>  
-            </div>
-        </nav>
+        <div class="navbar-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top px-4">
+                <div class="container-fluid">
+                    <a class="navbar-brand pr-5" href="/">
+                        <img src="{{url_for('static', filename='logo.png')}}" alt="JGT" width="100" height="60">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle">
+                        <span class="navbar-toggler-icon ml-auto"></span>
+                    </button>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item pr-4">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item pr-4">
+                                <a class="nav-link" href="/about-us">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown pr-4">
+                                <a class="nav-link dropdown-toggle" href="/products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Products
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/products/cosmetic">Cosmetic</a>
+                                    <a class="dropdown-item" href="/products/food-and-beverage">Food and Beverage</a>
+                                    <a class="dropdown-item" href="/products/pharmaceutical">Pharmaceutical</a>
+                                    <a class="dropdown-item" href="/products/veterinary">Veterinary</a>
+                                </div>
+                            </li>
+                            <!-- <li class="nav-item pr-4">
+                                <a class="nav-link" href="/products">Products</a>
+                            </li> -->
+                            <li class="nav-item pr-4">
+                                <a class="nav-link" href="/services">Services</a>
+                            </li>
+                            <li class="nav-item pr-4">
+                                <a class="nav-link" href="/career">Career</a>
+                            </li>
+                            <li class="nav-item pr-4">
+                                <a class="nav-link" href="/contact-us">Contact Us</a>
+                            </li>
+                        </ul>  
+                    </div>  
+                </div>
+            </nav>
+        </div>
         {% block content %}{% endblock %}
 
         <!-- Footer -->
