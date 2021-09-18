@@ -48,6 +48,41 @@
         border:6px solid;
         color: white;
     }
+    #status {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+    #status.success {
+        background-color: rgb(211, 250, 153);
+        animation: status 5s ease forwards;
+    }
+    #status.error {
+        background-color: rgb(250, 129, 92);
+        color: white;
+        animation: status 10s ease forwards;
+    }
+    @keyframes status {
+        0% {
+            opacity: 1;
+            pointer-events: all;
+        }
+        90% {
+            opacity: 1;
+            pointer-events: all;
+        }
+        100% {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 
 <div class="container-fluid">
@@ -83,38 +118,73 @@
         </div>
     </div>
 
-    <!-- Form -->
-    <form class="form-horizontal px-5 pb-5" action="/form.php" method="POST">
-        <div class="form-group">
-            <label class="required">First Name</label>
-            <input type="text" class="form-control" required="true">
+    <section>
+        <!-- Form -->
+        <div class="form-container">
+            <form class="form-horizontal px-5 pb-5" id="contact-us-form" action="https://formspree.io/f/mgerdybj" method="POST">
+                <div class="form-group">
+                    <label class="required" for="First Name">First Name</label>
+                    <input type="text" class="form-control" id="First Name" name="First Name" required="true">
+                </div>
+                <div class="form-group">
+                    <label for="Last Name">Last Name</label>
+                    <input type="text" class="form-control" id="Last Name" name="Last Name">
+                </div>
+                <div class="form-group">       
+                <label for="Company Name">Company Name</label>
+                <input type="text" class="form-control" id="Company Name" name="Company Name">
+                </div>
+                <div class="form-group">
+                    <label class="required" for="Email">Email</label>
+                    <input type="email" class="form-control" id="Email" name="Email" required="true">
+                </div>
+                <div class="form-group">
+                    <label class="required" for="Phone Number">Phone Number</label>
+                    <input type="number" class="form-control" id="Phone Number" name="Phone Number" required="true">
+                </div>
+                <div class="form-group">
+                    <label class="required" for="Message">Your Message</label>
+                    <textarea class="form-control" id="Message" name="Message" rows="6" required="true"></textarea>
+                </div>
+
+                <p class="require">Required</p>
+                <button id="submit-button" type="submit">Submit</button>
+
+                <div id="status"></div>
+            </form>
         </div>
-        <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="form-group">       
-          <label>Company Name</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="form-group">
-            <label class="required">Email</label>
-            <input type="email" class="form-control" required="true">
-        </div>
-        <div class="form-group">
-            <label class="required">Phone Number</label>
-            <input type="number" class="form-control" required="true">
-        </div>
-        <div class="form-group">
-            <label class="required" for="message">Your Message</label>
-            <textarea class="form-control" id="message" rows="6" required="true"></textarea>
-        </div>
-        <p class="require">Required</p>
-        <form action="#">
-            <input id="submit-button" type="submit" value="Submit" />
-        </form>
-    </form>
+    </section>
 </div>
 
+<script>
+    var form = document.getElementById("contact-us-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.status === 200) {
+            status.classList.add("success");
+            status.innerHTML = "Thanks for your submission! Our customer service will be in contact with you soon.";
+            form.reset()
+          }
+        else {
+            status.classList.add("error");
+            status.innerHTML = "Oops! There was a problem submitting your form, please contact info@jegati.com";
+        }
+      }).catch(error => {
+        status.classList.add("error");
+        status.innerHTML = "Oops! There was a problem submitting your form, please contact info@jegati.com";
+      });
+    }
+    form.addEventListener("submit", handleSubmit);
+</script>
 
 {% endblock %}
