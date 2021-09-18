@@ -21,53 +21,6 @@
             box-shadow: none;
         }
     }
-    .homeSlides {
-        width: 100%;
-        position: relative;
-        margin: auto;
-    }
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: 0px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        transition: all 0.2s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    }
-    .next{
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-    .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        -webkit-animation-fill-mode: forwards; 
-        animation-name: fade;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards; 
-    }
-    @-webkit-keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-    @media only screen and (max-width: 300px) {
-        .prev, .next {
-            font-size: 10px;
-        }
-    }
     .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         padding: 10px 5px;
@@ -92,29 +45,17 @@
 
 <div class="container-fluid px-0 mx-0">
     <div class="row no-gutters" id="image-about-us-container">
-        <!-- Slide Show -->
+        <!-- About Us -->
         <div class="col-lg-4 no-gutters" id="image-container">
-            <!-- <div class="slideshow-container"> -->
-                <!-- <div class="homeSlides fade py-0"> -->
-                    <img src="../static/photos/all_staff.jpg" id="staff">
-                <!-- </div> -->
-                <!-- <div class="homeSlides fade py-0">
-                    <img src="../static/photos/gedung_depan.jpg" id="staff">
-                </div> -->
-            <!-- </div> -->
+            <img src="../static/photos/all_staff.jpg" id="staff">
         </div>
-
-        <!-- <a class="prev" onclick="nextSlides(-1)">&#10094</a>
-        <a class="next" onclick="nextSlides(1)">&#10095</a> -->
         
         <!-- About Us Description -->
         <div class="col-lg-8 px-5 py-5 text-center" id="about-us">
-            <!-- <div class="row px-5 py-5 text-center" id="about-us"> -->
             <div class="card pt-3">
                 <h3>About Us</h3>
             </div>
             <br>
-            <!-- <br><br><br> -->
             <!-- <p><strong>PT Jegati Gempita Trijaya merupakan perusahaan yang berdiri sejak 29 Agustus 2019, 
                 bergerak dibidang supplier bahan baku obat dan kosmetik</strong>
                 <br><br>
@@ -137,7 +78,6 @@
                     from all around the world. 
                 </p>
             </div>
-            <!-- </div> -->
         </div>
     </div>
 
@@ -151,6 +91,7 @@
         <p>"Excel as a supplier by providing products with the best quality and price to customers"</p>
         <br>
     </div>
+
     <!-- Mision -->
     <div class="row px-5 pb-3" id="mision-title">
         <h3>Our Mision</h3>
@@ -181,30 +122,5 @@
         <img src="../static/photos/collage.jpg" id="staff">
     </div>
 </div>
-
-<!-- JavaScript for Slide Show -->
-<!-- <script>
-    var index = 1;
-    showSlides(index);
-    
-    function nextSlides(n) {
-        showSlides(index += n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("homeSlides");
-        if (n > slides.length) {
-            index = 1;
-        }
-        if (n < 1) {
-            index = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[index - 1].style.display = "block";
-    }
-</script> -->
 
 {% endblock %}
