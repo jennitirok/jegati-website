@@ -7,7 +7,24 @@
         margin: auto;
     }
     #description {
+        display: flex;
         background-color: #ededed;
+        text-align: justify;
+        align-items: center;
+    }
+    #description-photo {
+        width: 100%;
+        height: 100%;
+    }
+    @media (max-width: 992px) {
+        #description-photo {
+            /* width: 60%;
+            height: 75%;
+            padding: 20px 0 20px 0;
+            margin: 0 20% 0 20%;
+            align-items: center; */
+            display: none;
+        }
     }
     #product-section {
         background-color: white;
@@ -40,8 +57,12 @@
 
 <div class="container-fluid">
     <!-- Company Description -->
-    <div class="row px-5 pt-5 pb-4 text-center" id="description">
-        <!-- <p><strong>PT Jegati Gempita Trijaya merupakan perusahaan yang berdiri sejak 29 Agustus 2018, 
+    <div class="row pl-5 pr-4 py-4 " id="description">
+        <div class="col-lg-3">
+            <img src="../static/photos/front_building.jpg" id="description-photo">
+        </div>
+        <div class="col-lg-9 px-5 pt-3">
+            <!-- <p><strong>PT Jegati Gempita Trijaya merupakan perusahaan yang berdiri sejak 29 Agustus 2018, 
             bergerak dibidang supplier bahan baku obat dan kosmetik</strong>
             <br><br>
             Kami telah memiliki izin dan sertifikasi yang diakui oleh BPOM dan Kementrian Kesehatan. 
@@ -50,17 +71,18 @@
             <br><br>
             Dengan kerjasama yang kuat dengan worldwide manufacturer serta rutin mengikuti pameran CPhI di Asia, kami 
             berkomitmen untuk menjadi supplier yang berkualitas.
-        </p> -->
-        <p><strong>PT Jegati Gempita Trijaya was established on August, 2018, specialized in supplying
-            Pharmaceutical and Cosmetic raw materials certified by BPOM (National Agency of Drug and Food Control) 
-            and Ministry of Health Indonesia</strong>
-            <br><br>
-            Approved by PBF (Pedagang Besar Farmasi) and CDOB (Cara Distribusi Obat yang Baik), we have ensured 
-            that our facilities, infrastructure and quality of products have qualified the highest standard. 
-            <br><br>
-            We are committed to maintain our best standard as a supplier through our strong cooperation with manufacturers
-            from all around the world. 
-        </p>
+            </p> -->
+            <p><strong>PT Jegati Gempita Trijaya was established on August, 2018, specialized in supplying
+                Pharmaceutical and Cosmetic raw materials certified by BPOM (National Agency of Drug and Food Control) 
+                and Ministry of Health Indonesia</strong>
+                <br><br>
+                Approved by PBF (Pedagang Besar Farmasi) and CDOB (Cara Distribusi Obat yang Baik), we have ensured 
+                that our facilities, infrastructure and quality of products have qualified the highest standard. 
+                <br><br>
+                We are committed to maintain our best standard as a supplier through our strong cooperation with manufacturers
+                from all around the world. 
+            </p>
+        </div>
     </div>
 
     <!-- Product Links -->
