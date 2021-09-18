@@ -20,21 +20,21 @@
 
 <div class="container-fluid py-1">
     <!-- Search Bar -->
-    <div class="search-bar">
+    <!-- <div class="search-bar">
         <form action="#">
             <div class="input-group col-md-9 mx-md-auto py-3">
                 <input class="form-control py-2 border-right-0 border" name="search" value="" type="search" placeholder="Search Cosmetic Products..." id="search-products">
                 <span class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="submit">
+                    <button class="btn btn-outline-secondary" type="submit" onclick="searchBar()">
                         <i class="fa fa-search"></i>
                     </button>
                 </span>
             </div>
         </form>
-    </div>
+    </div> -->
 
     <!-- Product List -->
-    <div class="row px-4 py-4 ml-2">
+    <div class="row px-4 py-4 ml-2 mt-3">
         <div class="col-lg-3">
             <h4><b>Preservatives</b></h4>
             <br>
@@ -153,10 +153,21 @@
             <p>Tretinoic Acid</p>
             <p>Vitamin C</p>
             <p>Vitamin E</p>
-            <p></p>
         </div>
     </div>
 </div>
 
+<!-- <script>
+    function searchBar() {
+        let textToSearch = document.getElementById("search-products").value;
+        console.log(textToSearch)
+        let productList = document.getElementById("cosmetic-list");
+        console.log(productList)
+        textToSearch = textToSearch.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        let pattern = new RegExp(`${textToSearch}`, "gi");
+
+        productList.innerHTML = productList.textContent.replace(pattern, match => `<mark>${match}</mark>`)
+    }
+</script> -->
 
 {% endblock %}
