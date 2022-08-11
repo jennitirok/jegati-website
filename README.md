@@ -2,4 +2,4 @@
 
 Website of PT Jegati Gempita Trijaya made using Flask for back-end and HTML, CSS, JavaScript and Bootstrap for the front-end.
 <br>
-Copyright &copy; 2021. All Rights Reserved.
+Copyright &copy; 2022. All Rights Reserved.
