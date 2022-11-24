@@ -26,11 +26,11 @@
 <div class="container-fluid py-1">
     <!-- Search Bar -->
     <div class="search-bar">
-        <form action="#"  onsubmit="searchContent()">
+        <form action="#" id="search-form">
             <div class="input-group col-md-9 mx-md-auto py-3">
                 <input class="form-control py-2 border-right-0 border" name="search" value="" type="search" placeholder="Search Cosmetic Products..." id="search-products">
                 <span class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="submit" onclick="searchBar()">
+                    <button class="btn btn-outline-secondary" type="submit">
                         <i class="fa fa-search"></i>
                     </button>
                 </span>
@@ -163,26 +163,37 @@
 </div>
 
 <script>
-    function searchBar() {
-        let textToSearch = document.getElementById("search-products").value;
-        textToSearch = textToSearch.toLowerCase();
-        // console.log(textToSearch)
-        let productList = document.getElementById("cosmetic-list").getElementsByTagName('p');
+    var textToSearch = "";
+    var productList = document.getElementById("cosmetic-list").getElementsByTagName('p');
+
+    function search() {
+        console.log(textToSearch)
         textToSearch = textToSearch.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         let pattern = new RegExp(`${textToSearch}`, "gi");
 
         for (let i = 0; i < productList.length; i++) {
             if (!productList[i].innerHTML.toLowerCase().includes(textToSearch)) 
                 productList[i].style.display = "none";
+            else 
+                productList[i].style.display = "";
         }
     }
-    
-    function searchContent() {
-        let textToSearch = document.getElementById("search-products").value;
-        if (textToSearch === " ") 
-            return true;
-        return false;
-    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById("search-form").addEventListener("submit", function(e) {
+                textToSearch = document.getElementById("search-products").value;
+                textToSearch = textToSearch.toLowerCase();
+                if (textToSearch !== "") {
+                    e.preventDefault();
+                    console.log(productList);
+                    search();
+                } else {
+                    for (let i = 0; i < productList.length; i++) {
+                        productList[i].style.display = "";
+                    }
+                }
+            });
+        });
 </script>
 
 {% endblock %}
