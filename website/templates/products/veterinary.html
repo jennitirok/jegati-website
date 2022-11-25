@@ -43,64 +43,64 @@
         <div class="col-md-4">
             <h4><b>Antibacterial</b></h4>
             <br>
-            <p>Chlorhexidine Gluconate (CHG)</p>
+            <p title="Antibacterial">Chlorhexidine Gluconate (CHG)</p>
             <br>
 
             <h4><b>Antibiotics</b></h4>
             <br>
-            <p>Amoxicilin Trihidrate</p>
-            <p>Ciprofloxacin HCl</p>
-            <p>Doxycycline</p>
-            <p>Neomycin Sulphate</p>
+            <p title="Antibiotics">Amoxicilin Trihidrate</p>
+            <p title="Antibiotics">Ciprofloxacin HCl</p>
+            <p title="Antibiotics">Doxycycline</p>
+            <p title="Antibiotics">Neomycin Sulphate</p>
             <br>
 
             <h4><b>Athelmentics</b></h4>
             <br>
-            <p>Niclosamide</p>
-            <p>Piperazine and Salts</p>
-            <p>Totrazury</p>
+            <p title="Athelmentics">Niclosamide</p>
+            <p title="Athelmentics">Piperazine and Salts</p>
+            <p title="Athelmentics">Totrazury</p>
         </div>
         <div class="col-md-4" id="next-column">
             <h4><b>Feed Additives</b></h4>
             <br>
-            <p>Choline Chloride 60 CC</p>
-            <p>Choline Chloride 75% Liquid</p>
-            <p>Cholmax TM</p>
-            <p>L-Lysine</p>
-            <p>Lysiomax TM</p>
-            <p>Methiomax TM</p>
+            <p title="Feed Additives">Choline Chloride 60 CC</p>
+            <p title="Feed Additives">Choline Chloride 75% Liquid</p>
+            <p title="Feed Additives">Cholmax TM</p>
+            <p title="Feed Additives">L-Lysine</p>
+            <p title="Feed Additives">Lysiomax TM</p>
+            <p title="Feed Additives">Methiomax TM</p>
             <br>
 
             <h4><b>Minerals</b></h4>
             <br>
-            <p>Alcium Iodate 62%</p>
-            <p>Cobalt Sulphate</p>
-            <p>Copper Sulphate Pentahydrate 25%</p>
-            <p>DCP 18%</p>
-            <p>Ferous Sulphate</p>
-            <p>Manganese Oxide</p>
-            <p>Manganese Sulphate Monohydrate</p>
-            <p>Potassium Iodide</p>
-            <p>Sodium Selenite</p>
+            <p title="Minerals">Alcium Iodate 62%</p>
+            <p title="Minerals">Cobalt Sulphate</p>
+            <p title="Minerals">Copper Sulphate Pentahydrate 25%</p>
+            <p title="Minerals">DCP 18%</p>
+            <p title="Minerals">Ferous Sulphate</p>
+            <p title="Minerals">Manganese Oxide</p>
+            <p title="Minerals">Manganese Sulphate Monohydrate</p>
+            <p title="Minerals">Potassium Iodide</p>
+            <p title="Minerals">Sodium Selenite</p>
         </div>
         <div class="col-md-4" id="next-column">
             <h4><b>Vitamins</b></h4>
             <br>
-            <p>D-Calcium Panthotenate</p>
-            <p>Folic Acid</p>
-            <p>Inositol</p>
-            <p>Niacinamide (Vitamin B3)</p>
-            <p>Vitamin C</p>
-            <p>Vitamin E</p>
-            <p>Vitamin K3</p>
+            <p title="Vitamins">D-Calcium Panthotenate</p>
+            <p title="Vitamins">Folic Acid</p>
+            <p title="Vitamins">Inositol</p>
+            <p title="Vitamins">Niacinamide (Vitamin B3)</p>
+            <p title="Vitamins">Vitamin C</p>
+            <p title="Vitamins">Vitamin E</p>
+            <p title="Vitamins">Vitamin K3</p>
             <br>
 
             <h4><b>Others</b></h4>
             <br>
-            <p>Dexamethasone</p>
-            <p>Dextrose</p>
-            <p>Lactose</p>
-            <p>Paracetamol</p>
+            <p title="Others">Dexamethasone</p>
+            <p title="Others">Dextrose</p>
+            <p title="Others">Lactose</p>
+            <p title="Others">Paracetamol</p>
         </div>
     </div>
 </div>
@@ -108,17 +108,30 @@
 <script>
     var textToSearch = "";
     var productList = document.getElementById("veterinary-list").getElementsByTagName('p');
+    var productCategory = document.getElementsByTagName("b");
 
     function search() {
-        console.log(textToSearch)
         textToSearch = textToSearch.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         let pattern = new RegExp(`${textToSearch}`, "gi");
+        let selectedCategory = [];
 
         for (let i = 0; i < productList.length; i++) {
-            if (!productList[i].innerHTML.toLowerCase().includes(textToSearch)) 
+            if (!productList[i].innerHTML.toLowerCase().includes(textToSearch)) {
                 productList[i].style.display = "none";
-            else 
+            } else { 
                 productList[i].style.display = "";
+                let category = productList[i].getAttribute("title");
+                if (!selectedCategory.includes(category)) {
+                    selectedCategory.push(category);
+                }
+            }
+        }
+
+        for (let i = 0; i < productCategory.length; i++) {
+            if (!selectedCategory.includes(productCategory[i].textContent))
+                productCategory[i].style.display = "none";
+            else 
+                productCategory[i].style.display = "";
         }
     }
 
@@ -128,11 +141,13 @@
                 textToSearch = textToSearch.toLowerCase();
                 if (textToSearch !== "") {
                     e.preventDefault();
-                    console.log(productList);
                     search();
                 } else {
                     for (let i = 0; i < productList.length; i++) {
                         productList[i].style.display = "";
+                    }
+                    for (let i = 0; i < productCategory.length; i++) {
+                        productCategory[i].style.display = "";
                     }
                 }
             });
