@@ -46,6 +46,17 @@
         </form>
     </div>
 
+    <div class="no-result">
+        <p 
+            title="NoResult" 
+            style="display: none; 
+                   text-align: center; 
+                   font-size: large; 
+                   color: grey; 
+                   margin-top: 6rem;"
+                   >No Results Found</p>
+    </div>
+
     <!-- Product List -->
     <div class="row px-4 py-4 ml-4 mt-3" id="food-list">
         <div class="col-md-4">
@@ -159,15 +170,22 @@
     var textToSearch = "";
     var productList = document.getElementById("food-list").getElementsByTagName('p');
     var productCategory = document.getElementsByTagName("b");
+    var msg = document.querySelector('[title="NoResult"]');
 
     function search() {
         textToSearch = textToSearch.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         let pattern = new RegExp(`${textToSearch}`, "gi");
         let selectedCategory = [];
+        let count = 0
+
+        msg.style.display = "none";
 
         for (let i = 0; i < productList.length; i++) {
             if (!productList[i].innerHTML.toLowerCase().includes(textToSearch)) {
                 productList[i].style.display = "none";
+                if (productList[i].style.display === "none") {
+                    count += 1;
+                }
             } else { 
                 productList[i].style.display = "";
                 let category = productList[i].getAttribute("title");
@@ -183,6 +201,10 @@
             else 
                 productCategory[i].style.display = "";
         }
+
+        if (count === productList.length) {
+            msg.style.display = "";
+        }
     }
 
     document.addEventListener('DOMContentLoaded', (event) => {
@@ -193,6 +215,7 @@
                     e.preventDefault();
                     search();
                 } else {
+                    msg.style.display = "none";
                     for (let i = 0; i < productList.length; i++) {
                         productList[i].style.display = "";
                     }
